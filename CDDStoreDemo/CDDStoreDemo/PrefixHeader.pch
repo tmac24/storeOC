@@ -11,4 +11,12 @@
 
 #import "Headers.h"
 
+#ifdef DEBUG
+#define STLog(...) NSLog(__VA_ARGS__)
+#else
+#define STLog(...)
+#endif
+
+#define STLogFunc STLog(@"%s", __func__)
+
 #endif /* PrefixHeader_pch */

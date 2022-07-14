@@ -73,6 +73,11 @@
                               MallImgKey    : @"tabr_05_up",
                               MallSelImgKey : @"tabr_05_down"},
                             
+                            @{MallClassKey  : @"DCTestViewController",
+                              MallTitleKey  : @"测试",
+                              MallImgKey    : @"tabr_02_up",
+                              MallSelImgKey : @"tabr_02_down"},
+                            
                             ];
     [childArray enumerateObjectsUsingBlock:^(NSDictionary *dict, NSUInteger idx, BOOL * _Nonnull stop) {
         

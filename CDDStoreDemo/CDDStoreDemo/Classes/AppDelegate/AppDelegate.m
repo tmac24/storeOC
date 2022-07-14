@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "JKDBModel.h"
 #import "DCTabBarController.h"
+#import "STPushGuideView.h"
 
 #import "RequestTool.h"
 #import "NetworkUnit.h"
@@ -35,7 +36,10 @@
     
     [self getNetwork]; //获取网络
     
-    [self setUpFixiOS11]; //适配IOS 11
+//    [self setUpFixiOS11]; //适配IOS 11
+    
+    //显示推送引导
+    [STPushGuideView show];
     
     
     return YES;

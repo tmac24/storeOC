@@ -213,6 +213,9 @@
 		18F64B1B1F0E03F500DB978C /* PingFang Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18F64B1A1F0E03F500DB978C /* PingFang Medium.ttf */; };
 		29FF55AB287D590B00B0B68D /* ZYPositionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FF55A7287D590900B0B68D /* ZYPositionButton.m */; };
 		29FF55AC287D590B00B0B68D /* ZYMyCenterHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FF55A9287D590A00B0B68D /* ZYMyCenterHeadView.m */; };
+		29FF55B3287E669800B0B68D /* DCTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FF55B2287E669800B0B68D /* DCTestViewController.m */; };
+		29FF55B7287E741400B0B68D /* STPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FF55B5287E741400B0B68D /* STPushGuideView.m */; };
+		29FF55B8287E741400B0B68D /* STPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29FF55B6287E741400B0B68D /* STPushGuideView.xib */; };
 		928A971B1F7E7D63001F0A2B /* DCMySelfMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 928A971A1F7E7D63001F0A2B /* DCMySelfMessageViewController.xib */; };
 		92B4F8571F8DBBBE003C2E76 /* RequestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B4F8561F8DB7B4003C2E76 /* RequestTool.m */; };
 		92B4F8581F8DBBCC003C2E76 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 92B4F8501F8DB7B4003C2E76 /* EGOCache.m */; };
@@ -627,6 +630,11 @@
 		29FF55A8287D590A00B0B68D /* ZYMyCenterHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYMyCenterHeadView.h; sourceTree = "<group>"; };
 		29FF55A9287D590A00B0B68D /* ZYMyCenterHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYMyCenterHeadView.m; sourceTree = "<group>"; };
 		29FF55AA287D590A00B0B68D /* ZYPositionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYPositionButton.h; sourceTree = "<group>"; };
+		29FF55B1287E669800B0B68D /* DCTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCTestViewController.h; sourceTree = "<group>"; };
+		29FF55B2287E669800B0B68D /* DCTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCTestViewController.m; sourceTree = "<group>"; };
+		29FF55B4287E741300B0B68D /* STPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPushGuideView.h; sourceTree = "<group>"; };
+		29FF55B5287E741400B0B68D /* STPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPushGuideView.m; sourceTree = "<group>"; };
+		29FF55B6287E741400B0B68D /* STPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STPushGuideView.xib; sourceTree = "<group>"; };
 		928A971A1F7E7D63001F0A2B /* DCMySelfMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DCMySelfMessageViewController.xib; sourceTree = "<group>"; };
 		92B4F84F1F8DB7B4003C2E76 /* EGOCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
 		92B4F8501F8DB7B4003C2E76 /* EGOCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
@@ -827,6 +835,7 @@
 				18DCA13F1F1F4186008BF67E /* Classify(分类) */,
 				18DCA2B71F1F4186008BF67E /* PersonalCenter(个人中心) */,
 				18DCA2FB1F1F4187008BF67E /* ShoppingCar(购物车) */,
+				29FF55B0287E65A400B0B68D /* Mytest(测试） */,
 				18DCA1D91F1F4186008BF67E /* Expand(扩展) */,
 				18DCA2E11F1F4187008BF67E /* Resource */,
 			);
@@ -1706,6 +1715,9 @@
 			children = (
 				18DCA2B51F1F4186008BF67E /* DCTabBar.h */,
 				18DCA2B61F1F4186008BF67E /* DCTabBar.m */,
+				29FF55B4287E741300B0B68D /* STPushGuideView.h */,
+				29FF55B5287E741400B0B68D /* STPushGuideView.m */,
+				29FF55B6287E741400B0B68D /* STPushGuideView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1921,6 +1933,15 @@
 			path = PositionButton;
 			sourceTree = "<group>";
 		};
+		29FF55B0287E65A400B0B68D /* Mytest(测试） */ = {
+			isa = PBXGroup;
+			children = (
+				29FF55B1287E669800B0B68D /* DCTestViewController.h */,
+				29FF55B2287E669800B0B68D /* DCTestViewController.m */,
+			);
+			path = "Mytest(测试）";
+			sourceTree = "<group>";
+		};
 		74A1EBEB1AB5059931285F7F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -2098,6 +2119,7 @@
 				18DCA3B51F1F4187008BF67E /* ClassiftyGoods03.plist in Resources */,
 				18DCA3BB1F1F4187008BF67E /* ShopItem.plist in Resources */,
 				18DCA3B61F1F4187008BF67E /* ClassifyTitles.plist in Resources */,
+				29FF55B8287E741400B0B68D /* STPushGuideView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2282,6 +2304,7 @@
 				18DCA36B1F1F4187008BF67E /* UIView+Snapshot.m in Sources */,
 				181AEDAF1F4BC9A8003DB950 /* DCAttributeItemCell.m in Sources */,
 				18DCA33C1F1F4187008BF67E /* DCCommentPicCell.m in Sources */,
+				29FF55B3287E669800B0B68D /* DCTestViewController.m in Sources */,
 				18DCA3401F1F4187008BF67E /* DCFeatureItemCell.m in Sources */,
 				18DCA3611F1F4187008BF67E /* LBXZXCapture.m in Sources */,
 				18DCA3121F1F4187008BF67E /* DCBrandSortCell.m in Sources */,
@@ -2311,6 +2334,7 @@
 				18DCA3281F1F4187008BF67E /* DCFeatureItem.m in Sources */,
 				18DCA37B1F1F4187008BF67E /* XWCoolAnimator+XWPortal.m in Sources */,
 				18DCA37F1F1F4187008BF67E /* XWFilterAnimator+XWBarSwipe.m in Sources */,
+				29FF55B7287E741400B0B68D /* STPushGuideView.m in Sources */,
 				18DCA38C1F1F4187008BF67E /* DCGridItem.m in Sources */,
 				18DCA3A21F1F4187008BF67E /* DCMySelfMessageViewController.m in Sources */,
 				18DCA31D1F1F4187008BF67E /* DCFootprintCell.m in Sources */,

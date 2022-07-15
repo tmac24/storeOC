@@ -15,6 +15,10 @@
 #import "DCSpeedy.h" //便捷方法
 #import "DCUserInfo.h" //本地数据个人中心数据
 #import "UIView+DCExtension.h" // UIView分类
+#import "UILabel+DCExtension.h"
+#import "UIBarButtonItem+DCBarButtonItem.h"
+
+#import "DCProgressHUD.h"
 
 #import <Masonry.h>
 #import <Foundation/Foundation.h>

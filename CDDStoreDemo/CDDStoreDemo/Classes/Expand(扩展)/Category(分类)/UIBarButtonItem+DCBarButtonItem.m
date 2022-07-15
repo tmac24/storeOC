@@ -24,6 +24,20 @@
     return [[UIBarButtonItem alloc]initWithCustomView:contentView];
 }
 
++(UIBarButtonItem *)ItemWithTitle:(NSString *)title Target:(id)target action:(SEL)action
+{
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setTitle:title forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [btn sizeToFit];
+    
+    [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    UIView *contentView = [[UIView alloc]initWithFrame:btn.frame];
+    [contentView addSubview:btn];
+    
+    return [[UIBarButtonItem alloc]initWithCustomView:contentView];
+}
+
 +(UIBarButtonItem *)ItemWithImage:(UIImage *)image WithSelected:(UIImage *)SelectedImage Target:(id)target action:(SEL)action
 {
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];

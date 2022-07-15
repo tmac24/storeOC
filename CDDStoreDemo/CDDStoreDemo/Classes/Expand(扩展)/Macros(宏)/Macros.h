@@ -43,6 +43,11 @@
 
 //全局背景色
 #define DCBGColor RGB(245,245,245)
+#define DCLabelColor [UIColor blackColor]
+
+#define PFRFont(x) [UIFont fontWithName:@"PingFangSC-Regular" size:x]
+#define PFMFont(x) [UIFont fontWithName:@"PingFangSC-Medium" size:x]
+#define PFSFont(x) [UIFont fontWithName:@"PingFangSC-Semibold" size:x]
 
 #define PFR [[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0 ? @"PingFangSC-Regular" : @"PingFang SC"
 

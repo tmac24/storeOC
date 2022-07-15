@@ -211,6 +211,9 @@
 		18DCA3CA1F1F4187008BF67E /* DCRecommendReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA3081F1F4187008BF67E /* DCRecommendReusableView.m */; };
 		18DD85C71F0650F400F47095 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DD85C61F0650F400F47095 /* Assets.xcassets */; };
 		18F64B1B1F0E03F500DB978C /* PingFang Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18F64B1A1F0E03F500DB978C /* PingFang Medium.ttf */; };
+		29BB65642881373800E5B488 /* UILabel+DCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BB65632881373800E5B488 /* UILabel+DCExtension.m */; };
+		29F16A3A288153570068C9EC /* DCProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F16A39288153570068C9EC /* DCProgressHUD.m */; };
+		29F16A3E288156AB0068C9EC /* DCTopPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F16A3D288156AB0068C9EC /* DCTopPopView.m */; };
 		29FF55AB287D590B00B0B68D /* ZYPositionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FF55A7287D590900B0B68D /* ZYPositionButton.m */; };
 		29FF55AC287D590B00B0B68D /* ZYMyCenterHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FF55A9287D590A00B0B68D /* ZYMyCenterHeadView.m */; };
 		29FF55B3287E669800B0B68D /* DCTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FF55B2287E669800B0B68D /* DCTestViewController.m */; };
@@ -626,6 +629,13 @@
 		18DD85C61F0650F400F47095 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18DD85C81F06512100F47095 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		18F64B1A1F0E03F500DB978C /* PingFang Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PingFang Medium.ttf"; sourceTree = "<group>"; };
+		29BB655A2881323300E5B488 /* CDDStoreDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CDDStoreDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		29BB65622881373800E5B488 /* UILabel+DCExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+DCExtension.h"; sourceTree = "<group>"; };
+		29BB65632881373800E5B488 /* UILabel+DCExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+DCExtension.m"; sourceTree = "<group>"; };
+		29F16A38288153570068C9EC /* DCProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCProgressHUD.h; sourceTree = "<group>"; };
+		29F16A39288153570068C9EC /* DCProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCProgressHUD.m; sourceTree = "<group>"; };
+		29F16A3C288156AB0068C9EC /* DCTopPopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCTopPopView.h; sourceTree = "<group>"; };
+		29F16A3D288156AB0068C9EC /* DCTopPopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCTopPopView.m; sourceTree = "<group>"; };
 		29FF55A7287D590900B0B68D /* ZYPositionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPositionButton.m; sourceTree = "<group>"; };
 		29FF55A8287D590A00B0B68D /* ZYMyCenterHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYMyCenterHeadView.h; sourceTree = "<group>"; };
 		29FF55A9287D590A00B0B68D /* ZYMyCenterHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYMyCenterHeadView.m; sourceTree = "<group>"; };
@@ -1228,6 +1238,8 @@
 		18DCA1D91F1F4186008BF67E /* Expand(扩展) */ = {
 			isa = PBXGroup;
 			children = (
+				29F16A3B288156830068C9EC /* PopView */,
+				29F16A37288152F10068C9EC /* ToastHUD */,
 				18DCA1DA1F1F4186008BF67E /* Category(分类) */,
 				18DCA1E31F1F4186008BF67E /* Const(常量) */,
 				18DCA1E61F1F4186008BF67E /* Headers(头文件) */,
@@ -1249,6 +1261,8 @@
 				18DCA1E01F1F4186008BF67E /* UIImageView+DCExtension.m */,
 				18DCA1E11F1F4186008BF67E /* UIView+DCExtension.h */,
 				18DCA1E21F1F4186008BF67E /* UIView+DCExtension.m */,
+				29BB65622881373800E5B488 /* UILabel+DCExtension.h */,
+				29BB65632881373800E5B488 /* UILabel+DCExtension.m */,
 			);
 			path = "Category(分类)";
 			sourceTree = "<group>";
@@ -1290,6 +1304,7 @@
 				18DCA1F61F1F4186008BF67E /* DCSpeedy.h */,
 				18DCA1F71F1F4186008BF67E /* DCSpeedy.m */,
 				18DCA1F81F1F4186008BF67E /* Foundation+Log.m */,
+				29BB655A2881323300E5B488 /* CDDStoreDemo-Bridging-Header.h */,
 			);
 			path = "Tools(工具)";
 			sourceTree = "<group>";
@@ -1922,6 +1937,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		29F16A37288152F10068C9EC /* ToastHUD */ = {
+			isa = PBXGroup;
+			children = (
+				29F16A38288153570068C9EC /* DCProgressHUD.h */,
+				29F16A39288153570068C9EC /* DCProgressHUD.m */,
+			);
+			path = ToastHUD;
+			sourceTree = "<group>";
+		};
+		29F16A3B288156830068C9EC /* PopView */ = {
+			isa = PBXGroup;
+			children = (
+				29F16A3C288156AB0068C9EC /* DCTopPopView.h */,
+				29F16A3D288156AB0068C9EC /* DCTopPopView.m */,
+			);
+			path = PopView;
+			sourceTree = "<group>";
+		};
 		29FF55AD287D592700B0B68D /* PositionButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -2045,6 +2078,7 @@
 					187E67851E7D793000722607 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = W2WUVUE5P6;
+						LastSwiftMigration = 1340;
 						ProvisioningStyle = Automatic;
 					};
 					187E679E1E7D793100722607 = {
@@ -2272,6 +2306,7 @@
 				181AED861F4BC646003DB950 /* DCGoodCommentViewController.m in Sources */,
 				18DCA3271F1F4187008BF67E /* DCCommentPicItem.m in Sources */,
 				18DCA3781F1F4187008BF67E /* XWCoolAnimator+XWLines.m in Sources */,
+				29BB65642881373800E5B488 /* UILabel+DCExtension.m in Sources */,
 				181AED821F4BC646003DB950 /* DCFillinOrderViewController.m in Sources */,
 				18DCA3361F1F4187008BF67E /* DCShowTypeThreeCell.m in Sources */,
 				181AED831F4BC646003DB950 /* DCGoodBaseViewController.m in Sources */,
@@ -2288,6 +2323,8 @@
 				18DCA3551F1F4187008BF67E /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				18DCA3861F1F4187008BF67E /* XWFilterAnimator+XWRipple.m in Sources */,
 				18DCA3831F1F4187008BF67E /* XWFilterAnimator+XWMask.m in Sources */,
+				29F16A3A288153570068C9EC /* DCProgressHUD.m in Sources */,
+				29F16A3E288156AB0068C9EC /* DCTopPopView.m in Sources */,
 				18DCA3AC1F1F4187008BF67E /* DCMessageNoteCell.m in Sources */,
 				18DCA38F1F1F4187008BF67E /* DCGoodsGridCell.m in Sources */,
 				18DCA38E1F1F4187008BF67E /* DCGoodsCountDownCell.m in Sources */,
@@ -2519,7 +2556,9 @@
 			baseConfigurationReference = B6042526F9488CF29434ADDB /* Pods-CDDStoreDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = W2WUVUE5P6;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = CDDStoreDemo/PrefixHeader.pch;
@@ -2529,6 +2568,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = STO.RocketsChen.CDDMall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CDDStoreDemo/Classes/Expand(扩展)/Tools(工具)/CDDStoreDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -2537,7 +2579,9 @@
 			baseConfigurationReference = F3736E949C41228120EF9FC0 /* Pods-CDDStoreDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = W2WUVUE5P6;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = CDDStoreDemo/PrefixHeader.pch;
@@ -2547,6 +2591,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = STO.RocketsChen.CDDMall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CDDStoreDemo/Classes/Expand(扩展)/Tools(工具)/CDDStoreDemo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

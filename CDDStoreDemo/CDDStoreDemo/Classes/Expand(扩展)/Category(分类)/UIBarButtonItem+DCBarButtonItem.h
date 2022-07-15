@@ -15,6 +15,7 @@
 
 +(UIBarButtonItem *)ItemWithImage:(UIImage *)image WithSelected:(UIImage *)SelectedImage Target:(id)target action:(SEL)action;
 
++(UIBarButtonItem *)ItemWithTitle:(NSString *)title Target:(id)target action:(SEL)action;
 
 #pragma 返回
 +(UIBarButtonItem *)backItemWithImage:(UIImage *)image WithHighlightedImage:(UIImage *)HighlightedImage Target:(id)target action:(SEL)action title:(NSString *)title;

@@ -214,6 +214,10 @@
 		29BB65642881373800E5B488 /* UILabel+DCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BB65632881373800E5B488 /* UILabel+DCExtension.m */; };
 		29F16A3A288153570068C9EC /* DCProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F16A39288153570068C9EC /* DCProgressHUD.m */; };
 		29F16A3E288156AB0068C9EC /* DCTopPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F16A3D288156AB0068C9EC /* DCTopPopView.m */; };
+		29F16A44288684070068C9EC /* DCTestPopSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F16A43288684070068C9EC /* DCTestPopSelectView.m */; };
+		29F16A4728868C610068C9EC /* DCBottomPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F16A4628868C610068C9EC /* DCBottomPopView.m */; };
+		29F16A4A288690A30068C9EC /* DCCenterPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F16A49288690A30068C9EC /* DCCenterPopView.m */; };
+		29F16A4D28869C310068C9EC /* DCDrawerPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F16A4C28869C310068C9EC /* DCDrawerPopView.m */; };
 		29FF55AB287D590B00B0B68D /* ZYPositionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FF55A7287D590900B0B68D /* ZYPositionButton.m */; };
 		29FF55AC287D590B00B0B68D /* ZYMyCenterHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FF55A9287D590A00B0B68D /* ZYMyCenterHeadView.m */; };
 		29FF55B3287E669800B0B68D /* DCTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FF55B2287E669800B0B68D /* DCTestViewController.m */; };
@@ -636,6 +640,14 @@
 		29F16A39288153570068C9EC /* DCProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCProgressHUD.m; sourceTree = "<group>"; };
 		29F16A3C288156AB0068C9EC /* DCTopPopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCTopPopView.h; sourceTree = "<group>"; };
 		29F16A3D288156AB0068C9EC /* DCTopPopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCTopPopView.m; sourceTree = "<group>"; };
+		29F16A42288684070068C9EC /* DCTestPopSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCTestPopSelectView.h; sourceTree = "<group>"; };
+		29F16A43288684070068C9EC /* DCTestPopSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCTestPopSelectView.m; sourceTree = "<group>"; };
+		29F16A4528868C610068C9EC /* DCBottomPopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCBottomPopView.h; sourceTree = "<group>"; };
+		29F16A4628868C610068C9EC /* DCBottomPopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCBottomPopView.m; sourceTree = "<group>"; };
+		29F16A48288690A20068C9EC /* DCCenterPopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCCenterPopView.h; sourceTree = "<group>"; };
+		29F16A49288690A30068C9EC /* DCCenterPopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCCenterPopView.m; sourceTree = "<group>"; };
+		29F16A4B28869C300068C9EC /* DCDrawerPopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCDrawerPopView.h; sourceTree = "<group>"; };
+		29F16A4C28869C310068C9EC /* DCDrawerPopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCDrawerPopView.m; sourceTree = "<group>"; };
 		29FF55A7287D590900B0B68D /* ZYPositionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPositionButton.m; sourceTree = "<group>"; };
 		29FF55A8287D590A00B0B68D /* ZYMyCenterHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYMyCenterHeadView.h; sourceTree = "<group>"; };
 		29FF55A9287D590A00B0B68D /* ZYMyCenterHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYMyCenterHeadView.m; sourceTree = "<group>"; };
@@ -1280,6 +1292,7 @@
 			isa = PBXGroup;
 			children = (
 				18DCA1E71F1F4186008BF67E /* Headers.h */,
+				29BB655A2881323300E5B488 /* CDDStoreDemo-Bridging-Header.h */,
 			);
 			path = "Headers(头文件)";
 			sourceTree = "<group>";
@@ -1304,7 +1317,6 @@
 				18DCA1F61F1F4186008BF67E /* DCSpeedy.h */,
 				18DCA1F71F1F4186008BF67E /* DCSpeedy.m */,
 				18DCA1F81F1F4186008BF67E /* Foundation+Log.m */,
-				29BB655A2881323300E5B488 /* CDDStoreDemo-Bridging-Header.h */,
 			);
 			path = "Tools(工具)";
 			sourceTree = "<group>";
@@ -1951,8 +1963,23 @@
 			children = (
 				29F16A3C288156AB0068C9EC /* DCTopPopView.h */,
 				29F16A3D288156AB0068C9EC /* DCTopPopView.m */,
+				29F16A4528868C610068C9EC /* DCBottomPopView.h */,
+				29F16A4628868C610068C9EC /* DCBottomPopView.m */,
+				29F16A48288690A20068C9EC /* DCCenterPopView.h */,
+				29F16A49288690A30068C9EC /* DCCenterPopView.m */,
+				29F16A4B28869C300068C9EC /* DCDrawerPopView.h */,
+				29F16A4C28869C310068C9EC /* DCDrawerPopView.m */,
 			);
 			path = PopView;
+			sourceTree = "<group>";
+		};
+		29F16A41288683CC0068C9EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				29F16A42288684070068C9EC /* DCTestPopSelectView.h */,
+				29F16A43288684070068C9EC /* DCTestPopSelectView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		29FF55AD287D592700B0B68D /* PositionButton */ = {
@@ -1971,6 +1998,7 @@
 			children = (
 				29FF55B1287E669800B0B68D /* DCTestViewController.h */,
 				29FF55B2287E669800B0B68D /* DCTestViewController.m */,
+				29F16A41288683CC0068C9EC /* View */,
 			);
 			path = "Mytest(测试）";
 			sourceTree = "<group>";
@@ -2241,6 +2269,7 @@
 				18DCA30A1F1F4187008BF67E /* DCCommodityViewController.m in Sources */,
 				18DCA3421F1F4187008BF67E /* DCFeatureChoseTopCell.m in Sources */,
 				18DCA3AA1F1F4187008BF67E /* DCUserInfo.m in Sources */,
+				29F16A4D28869C310068C9EC /* DCDrawerPopView.m in Sources */,
 				18DCA33F1F1F4187008BF67E /* DCShareItemCell.m in Sources */,
 				18DCA3771F1F4187008BF67E /* XWCoolAnimator+XWFold.m in Sources */,
 				18DCA3931F1F4187008BF67E /* DCOverFootView.m in Sources */,
@@ -2315,6 +2344,7 @@
 				18DCA32F1F1F4187008BF67E /* DCDetailLikeCell.m in Sources */,
 				18DCA30F1F1F4187008BF67E /* DCClassGoodsItem.m in Sources */,
 				18DCA33D1F1F4187008BF67E /* DCDetailPartCommentCell.m in Sources */,
+				29F16A4728868C610068C9EC /* DCBottomPopView.m in Sources */,
 				18DCA3CA1F1F4187008BF67E /* DCRecommendReusableView.m in Sources */,
 				18DCA35D1F1F4187008BF67E /* LBXScanView.m in Sources */,
 				18DCA3541F1F4187008BF67E /* JKDBModel.m in Sources */,
@@ -2362,6 +2392,7 @@
 				18DCA39D1F1F4187008BF67E /* DCNavigationController.m in Sources */,
 				18DCA35E1F1F4187008BF67E /* LBXScanViewController.m in Sources */,
 				181AED971F4BC94D003DB950 /* DCFiltrateItem.m in Sources */,
+				29F16A44288684070068C9EC /* DCTestPopSelectView.m in Sources */,
 				181AED841F4BC646003DB950 /* DCShareToViewController.m in Sources */,
 				18DCA3961F1F4187008BF67E /* DCCountDownHeadView.m in Sources */,
 				18DCA33A1F1F4187008BF67E /* DCCommentFooterCell.m in Sources */,
@@ -2369,6 +2400,7 @@
 				18DCA39F1F1F4187008BF67E /* DCTabBar.m in Sources */,
 				18DCA3741F1F4187008BF67E /* SDWaitingView.m in Sources */,
 				18DCA3281F1F4187008BF67E /* DCFeatureItem.m in Sources */,
+				29F16A4A288690A30068C9EC /* DCCenterPopView.m in Sources */,
 				18DCA37B1F1F4187008BF67E /* XWCoolAnimator+XWPortal.m in Sources */,
 				18DCA37F1F1F4187008BF67E /* XWFilterAnimator+XWBarSwipe.m in Sources */,
 				29FF55B7287E741400B0B68D /* STPushGuideView.m in Sources */,

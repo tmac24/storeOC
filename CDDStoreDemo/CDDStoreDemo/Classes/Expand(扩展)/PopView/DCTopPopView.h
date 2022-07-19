@@ -16,6 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)dismiss;
 
+/// 显示或隐藏弹框
+/// @param contentView 弹框view
+/// @param offsetY 弹框view位置
++ (void)showOrHideWithContent:(UIView *)contentView offsetY:(CGFloat)offsetY;
+
 @end
 
 NS_ASSUME_NONNULL_END

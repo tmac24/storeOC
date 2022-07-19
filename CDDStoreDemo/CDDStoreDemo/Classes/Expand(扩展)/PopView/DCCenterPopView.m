@@ -1,40 +1,43 @@
 //
-//  DCTopPopView.m
+//  DCCenterPopView.m
 //  CDDStoreDemo
 //
-//  Created by cdql10103 on 2022/7/15.
+//  Created by cdql10103 on 2022/7/19.
 //  Copyright © 2022 RocketsChen. All rights reserved.
 //
 
-#import "DCTopPopView.h"
+#import "DCCenterPopView.h"
 
-@interface DCTopPopView ()<UIGestureRecognizerDelegate>
+@interface DCCenterPopView ()<UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) UIView *contentView;
 
 @end
 
-@implementation DCTopPopView
+@implementation DCCenterPopView
 
+- (bool)enableGes {
+    return true;
+}
 
-+ (void)showOrHideWithContent:(UIView *)contentView offsetY:(CGFloat)offsetY {
++ (void)showOrHideWithContent:(UIView *)contentView enableGesture:(bool)enableGesture {
     if (contentView.superview != nil) {
-        [DCTopPopView dismiss];
+        [DCCenterPopView dismiss];
     }else {
-        [DCTopPopView showWithContent:contentView offsetY:(CGFloat)offsetY enableGesture:true];
+        [DCCenterPopView showWithContent:contentView enableGesture:enableGesture];
     }
 }
 
-+ (void)showWithContent:(UIView *)contentView offsetY:(CGFloat)offsetY enableGesture:(bool)enableGesture {
-    DCTopPopView *topView = [[DCTopPopView alloc] init];
-    [topView show:contentView offsetY:offsetY pView:[[UIApplication sharedApplication] delegate].window enableGesture:enableGesture tag:-2999];
++ (void)showWithContent:(UIView *)contentView enableGesture:(bool)enableGesture {
+    DCCenterPopView *centerView = [[DCCenterPopView alloc] init];
+    [centerView show:contentView pView:[[UIApplication sharedApplication] delegate].window enableGesture:enableGesture tag:-19999];
 }
 
-- (void)show:(UIView *)contentView offsetY:(CGFloat)offsetY pView:(UIView *)pView enableGesture:(bool)enableGesture tag:(int)tag {
+- (void)show:(UIView *)contentView pView:(UIView *)pView enableGesture:(bool)enableGesture tag:(int)tag {
     self.contentView = contentView;
     self.tag = tag;
-    self.frame = CGRectMake(0, offsetY, ScreenW, ScreenH-offsetY);
-    self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.2];
+    self.frame = pView.bounds;
+    self.backgroundColor = [UIColor clearColor];
     if (enableGesture == true) {
         UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissPressed:)];
         tapGes.delegate = self;
@@ -42,13 +45,20 @@
     }
     
     CGFloat height = contentView.frame.size.height;
-    self.contentView.frame = CGRectMake(0, 0, ScreenW, 0);
+    CGFloat width = contentView.frame.size.width;
+
+    self.contentView.frame = CGRectMake(0, 0, width, height);
     [pView addSubview:self];
     
     [self addSubview:self.contentView];
+    self.contentView.center = CGPointMake(ScreenW/2, ScreenH/2);
+    contentView.alpha = 1;
+    contentView.transform = CGAffineTransformScale(contentView.transform, 1.15, 1.15);
+
     [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-        self.contentView.frame = CGRectMake(0, 0, ScreenW, height);
-        } completion:^(BOOL finished) {            
+        self.contentView.transform = CGAffineTransformIdentity;
+        self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.2];
+        } completion:^(BOOL finished) {
         }];
 }
 
@@ -58,18 +68,15 @@
 
 + (void)dismiss{
     UIWindow *window = [[UIApplication sharedApplication] delegate].window;
-    DCTopPopView *topView = [window viewWithTag:-2999];
-    [topView dismissView];
+    DCCenterPopView *centerView = [window viewWithTag:-19999];
+    [centerView dismissView];
 }
 
 - (void)dismissView{
-    CGFloat height = self.contentView.frame.size.height;
     [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-        self.contentView.frame = CGRectMake(0, 0, ScreenW, 0);
         self.backgroundColor = [UIColor clearColor];
-        
+        self.contentView.alpha = 0;
         } completion:^(BOOL finished) {
-            self.contentView.frame = CGRectMake(0, 0, ScreenW, height);
             [self removeFromSuperview];
             [self.contentView removeFromSuperview];
         }];
@@ -83,3 +90,4 @@
 }
 
 @end
+

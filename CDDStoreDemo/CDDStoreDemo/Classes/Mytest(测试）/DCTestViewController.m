@@ -8,6 +8,10 @@
 
 #import "DCTestViewController.h"
 #import "DCTopPopView.h"
+#import "DCTestPopSelectView.h"
+#import "DCBottomPopView.h"
+#import "DCCenterPopView.h"
+#import "DCDrawerPopView.h"
 
 @interface DCTestViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -17,6 +21,8 @@
 @property (nonatomic, strong) NSArray *datas;
 /* 弹框视图 */
 @property (nonatomic, strong) UIView *popView;
+/* 选择框弹框视图 */
+@property (nonatomic, strong) DCTestPopSelectView *popSelectView;
 
 @end
 
@@ -40,9 +46,21 @@ static NSString *const DCTestViewCellID = @"DCTestViewCellID";
 - (UIView *)popView {
     if (!_popView) {
         _popView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 60)];
-        _popView.backgroundColor = [UIColor blueColor];
+        _popView.backgroundColor = [UIColor whiteColor];
+        UILabel *label = [UILabel quickInit:[UIColor blackColor] font:PFSFont(20) text:
+                          @"我知道了"];
+        label.frame = _popView.bounds;
+        label.textAlignment = NSTextAlignmentCenter;
+        [_popView addSubview:label];
     }
     return _popView;
+}
+
+- (DCTestPopSelectView *)popSelectView {
+    if (!_popSelectView) {
+        _popSelectView = [[DCTestPopSelectView alloc] initWithFrame:CGRectMake(0, 0, ScreenW, 150)];
+    }
+    return _popSelectView;
 }
 
 #pragma mark - LifeCyle
@@ -52,15 +70,6 @@ static NSString *const DCTestViewCellID = @"DCTestViewCellID";
     
     [self setUpUI];
     [self setUpData];
-  
-//    UILabel *label = [UILabel quickInit:HEXCOLOR(0xFC6063) font:PFRFont(13) text:@"fsfs"];
-//    [label mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.mas_equalTo(self).offset(11);
-//        make.width.mas_equalTo(100);
-//        make.height.mas_equalTo(34);
-//        make.left.mas_equalTo(200);
-//    }];
-//    [self.view addSubview:label];
 }
 
 #pragma mark - initialize
@@ -68,8 +77,6 @@ static NSString *const DCTestViewCellID = @"DCTestViewCellID";
     self.view.backgroundColor = [UIColor whiteColor];
     self.tableView.frame = CGRectMake(0, navH, ScreenW, ScreenH-navH-tabbarH);
     
-//    self.navigationItem.rightBarButtonItem = [UIBarButtonItem ItemWithImage:[UIImage imageNamed:@"message"] WithHighlighted:[UIImage imageNamed:@"message"] Target:self action:@selector(messageItemClick)];
-
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem ItemWithTitle:@"编辑" Target:self action:@selector(editClick)];
 }
 
@@ -81,11 +88,28 @@ static NSString *const DCTestViewCellID = @"DCTestViewCellID";
 
 #pragma mark - UIBarButtonItem事件
 - (void)editClick {
-    if (self.popView.superview != nil) {
-        [DCTopPopView dismiss];
-    }else {
-        [DCTopPopView showWithContent:self.popView offsetY:88 enableGesture:true];
-    }
+//    if (self.popSelectView.superview != nil) {
+//        [DCTopPopView dismiss];
+//    }else {
+//        [DCTopPopView showWithContent:self.popSelectView offsetY:navH enableGesture:true];
+//    }
+//    [DCTopPopView showOrHideWithContent:self.popSelectView offsetY:navH];
+    
+//    if (self.popView.superview != nil) {
+//        [DCCenterPopView dismiss];
+//    }else {
+//        [DCCenterPopView showWithContent:self.popView enableGesture:false];
+//    }
+//    [DCCenterPopView showOrHideWithContent:self.popView enableGesture:true];
+    
+//    if (self.popSelectView.superview != nil) {
+//        [DCBottomPopView dismiss];
+//    }else {
+//        [DCBottomPopView showWithContent:self.popSelectView enableGesture:true];
+//    }
+//    [DCBottomPopView showOrHideWithContent:self.popSelectView];
+    
+    [DCDrawerPopView showOrHideWithContent:self.popSelectView width:ScreenW*0.8];
 }
 
 #pragma mark - <UITableViewDataSource>

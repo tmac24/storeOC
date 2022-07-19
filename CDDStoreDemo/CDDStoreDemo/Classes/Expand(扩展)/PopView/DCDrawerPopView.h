@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DCDrawerPopView : UIView
 
++ (void)showWithContent:(UIView *)contentView width:(CGFloat)width;
++ (void)dismiss;
 /// 右边抽屉弹框
 /// @param contentView 弹框内容
 /// @param width 弹框宽度

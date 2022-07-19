@@ -25,9 +25,9 @@
     }
 }
 
-+ (void)showWithContent:(UIView *)contentView width:(CGFloat)width tag:(int)tag  {
++ (void)showWithContent:(UIView *)contentView width:(CGFloat)width {
     DCDrawerPopView *drawerPopView = [[DCDrawerPopView alloc] init];
-    [drawerPopView show:contentView pView:[[UIApplication sharedApplication] delegate].window enableGesture:true width:width tag:tag];
+    [drawerPopView show:contentView pView:[[UIApplication sharedApplication] delegate].window enableGesture:true width:width tag:-1999];
 }
 
 - (void)show:(UIView *)contentView pView:(UIView *)pView enableGesture:(bool)enableGesture width:(CGFloat)width tag:(int)tag {

@@ -21,7 +21,7 @@
     if (contentView.superview != nil) {
         [DCDrawerPopView dismiss];
     }else {
-        [DCDrawerPopView showWithContent:contentView width:width tag:-1999];
+        [DCDrawerPopView showWithContent:contentView width:width];
     }
 }
 
@@ -40,6 +40,11 @@
         UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissPressed:)];
         tapGes.delegate = self;
         [self addGestureRecognizer:tapGes];
+        
+//        //添加手势
+//        UIPanGestureRecognizer *pan=[[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panEvent:)]; //滑动
+//        pan.delegate = self;
+//        [self addGestureRecognizer:pan];
     }
     
     CGFloat height = contentView.frame.size.height;
@@ -83,6 +88,29 @@
     CGPoint point = [touch locationInView:self];
     bool isContains = CGRectContainsPoint(self.contentView.frame, point);
     return !isContains;
+}
+
+#pragma mark - 滑动手势事件
+- (void)panEvent:(UIPanGestureRecognizer *)recognizer{
+    
+    CGPoint translation = [recognizer translationInView:self];
+    
+    if(UIGestureRecognizerStateBegan == recognizer.state || UIGestureRecognizerStateChanged == recognizer.state){
+        
+        if (translation.x > 0 ) {//右滑
+            self.contentView.dc_x = ScreenW * 0.2 + translation.x;
+        }else{//左滑
+            
+            if (self.contentView.dc_x < ScreenW * 0.2) {
+                self.contentView.dc_x = self.contentView.dc_x - translation.x;
+            }else{
+                self.contentView.dc_x = ScreenW * 0.2;
+            }
+        }
+    }else{
+        
+        [self dismissView];
+    }
 }
 
 @end

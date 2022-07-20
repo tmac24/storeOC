@@ -218,6 +218,9 @@
 		29F16A4728868C610068C9EC /* DCBottomPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F16A4628868C610068C9EC /* DCBottomPopView.m */; };
 		29F16A4A288690A30068C9EC /* DCCenterPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F16A49288690A30068C9EC /* DCCenterPopView.m */; };
 		29F16A4D28869C310068C9EC /* DCDrawerPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F16A4C28869C310068C9EC /* DCDrawerPopView.m */; };
+		29F16A532887DABC0068C9EC /* DCTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F16A522887DABC0068C9EC /* DCTestModel.m */; };
+		29F16A562887DFB00068C9EC /* DCPopTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F16A552887DFB00068C9EC /* DCPopTestViewController.m */; };
+		29F16A592887DFE00068C9EC /* DCRequestTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F16A582887DFE00068C9EC /* DCRequestTestViewController.m */; };
 		29FF55AB287D590B00B0B68D /* ZYPositionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FF55A7287D590900B0B68D /* ZYPositionButton.m */; };
 		29FF55AC287D590B00B0B68D /* ZYMyCenterHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FF55A9287D590A00B0B68D /* ZYMyCenterHeadView.m */; };
 		29FF55B3287E669800B0B68D /* DCTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FF55B2287E669800B0B68D /* DCTestViewController.m */; };
@@ -648,6 +651,12 @@
 		29F16A49288690A30068C9EC /* DCCenterPopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCCenterPopView.m; sourceTree = "<group>"; };
 		29F16A4B28869C300068C9EC /* DCDrawerPopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCDrawerPopView.h; sourceTree = "<group>"; };
 		29F16A4C28869C310068C9EC /* DCDrawerPopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCDrawerPopView.m; sourceTree = "<group>"; };
+		29F16A512887DABC0068C9EC /* DCTestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCTestModel.h; sourceTree = "<group>"; };
+		29F16A522887DABC0068C9EC /* DCTestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCTestModel.m; sourceTree = "<group>"; };
+		29F16A542887DFB00068C9EC /* DCPopTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCPopTestViewController.h; sourceTree = "<group>"; };
+		29F16A552887DFB00068C9EC /* DCPopTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCPopTestViewController.m; sourceTree = "<group>"; };
+		29F16A572887DFE00068C9EC /* DCRequestTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCRequestTestViewController.h; sourceTree = "<group>"; };
+		29F16A582887DFE00068C9EC /* DCRequestTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCRequestTestViewController.m; sourceTree = "<group>"; };
 		29FF55A7287D590900B0B68D /* ZYPositionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPositionButton.m; sourceTree = "<group>"; };
 		29FF55A8287D590A00B0B68D /* ZYMyCenterHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYMyCenterHeadView.h; sourceTree = "<group>"; };
 		29FF55A9287D590A00B0B68D /* ZYMyCenterHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYMyCenterHeadView.m; sourceTree = "<group>"; };
@@ -1982,6 +1991,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		29F16A502887DA960068C9EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				29F16A512887DABC0068C9EC /* DCTestModel.h */,
+				29F16A522887DABC0068C9EC /* DCTestModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		29FF55AD287D592700B0B68D /* PositionButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -1998,6 +2016,11 @@
 			children = (
 				29FF55B1287E669800B0B68D /* DCTestViewController.h */,
 				29FF55B2287E669800B0B68D /* DCTestViewController.m */,
+				29F16A542887DFB00068C9EC /* DCPopTestViewController.h */,
+				29F16A552887DFB00068C9EC /* DCPopTestViewController.m */,
+				29F16A572887DFE00068C9EC /* DCRequestTestViewController.h */,
+				29F16A582887DFE00068C9EC /* DCRequestTestViewController.m */,
+				29F16A502887DA960068C9EC /* Model */,
 				29F16A41288683CC0068C9EC /* View */,
 			);
 			path = "Mytest(测试）";
@@ -2334,6 +2357,7 @@
 				18DCA34D1F1F4187008BF67E /* DCSpeedy.m in Sources */,
 				181AED861F4BC646003DB950 /* DCGoodCommentViewController.m in Sources */,
 				18DCA3271F1F4187008BF67E /* DCCommentPicItem.m in Sources */,
+				29F16A592887DFE00068C9EC /* DCRequestTestViewController.m in Sources */,
 				18DCA3781F1F4187008BF67E /* XWCoolAnimator+XWLines.m in Sources */,
 				29BB65642881373800E5B488 /* UILabel+DCExtension.m in Sources */,
 				181AED821F4BC646003DB950 /* DCFillinOrderViewController.m in Sources */,
@@ -2421,6 +2445,7 @@
 				18DCA3821F1F4187008BF67E /* XWFilterAnimator+XWFlash.m in Sources */,
 				18DCA3A61F1F4187008BF67E /* DCSettingViewController.m in Sources */,
 				18DCA3751F1F4187008BF67E /* XWCircleSpreadAnimator.m in Sources */,
+				29F16A532887DABC0068C9EC /* DCTestModel.m in Sources */,
 				18DCA3C81F1F4187008BF67E /* DCEmptyCartView.m in Sources */,
 				18DCA3391F1F4187008BF67E /* DCCommentContentCell.m in Sources */,
 				18DCA3C61F1F4187008BF67E /* DCMyTrolleyViewController.m in Sources */,
@@ -2429,6 +2454,7 @@
 				18DCA3351F1F4187008BF67E /* DCShowTypeOneCell.m in Sources */,
 				18DCA3A91F1F4187008BF67E /* DCMessageItem.m in Sources */,
 				18DCA3921F1F4187008BF67E /* DCGoodsYouLikeCell.m in Sources */,
+				29F16A562887DFB00068C9EC /* DCPopTestViewController.m in Sources */,
 				18DCA36D1F1F4187008BF67E /* XWInteractiveTransition.m in Sources */,
 				29FF55AB287D590B00B0B68D /* ZYPositionButton.m in Sources */,
 				18DCA3681F1F4187008BF67E /* UIActionSheet+LBXAlertAction.m in Sources */,

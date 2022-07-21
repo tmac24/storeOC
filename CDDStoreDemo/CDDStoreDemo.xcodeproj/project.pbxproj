@@ -221,6 +221,8 @@
 		29F16A532887DABC0068C9EC /* DCTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F16A522887DABC0068C9EC /* DCTestModel.m */; };
 		29F16A562887DFB00068C9EC /* DCPopTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F16A552887DFB00068C9EC /* DCPopTestViewController.m */; };
 		29F16A592887DFE00068C9EC /* DCRequestTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F16A582887DFE00068C9EC /* DCRequestTestViewController.m */; };
+		29F16A5C2887F9DD0068C9EC /* DCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F16A5B2887F9DD0068C9EC /* DCWebViewController.m */; };
+		29F16A60288931DE0068C9EC /* DCBlock1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F16A5F288931DE0068C9EC /* DCBlock1ViewController.m */; };
 		29FF55AB287D590B00B0B68D /* ZYPositionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FF55A7287D590900B0B68D /* ZYPositionButton.m */; };
 		29FF55AC287D590B00B0B68D /* ZYMyCenterHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FF55A9287D590A00B0B68D /* ZYMyCenterHeadView.m */; };
 		29FF55B3287E669800B0B68D /* DCTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 29FF55B2287E669800B0B68D /* DCTestViewController.m */; };
@@ -657,6 +659,10 @@
 		29F16A552887DFB00068C9EC /* DCPopTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCPopTestViewController.m; sourceTree = "<group>"; };
 		29F16A572887DFE00068C9EC /* DCRequestTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCRequestTestViewController.h; sourceTree = "<group>"; };
 		29F16A582887DFE00068C9EC /* DCRequestTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCRequestTestViewController.m; sourceTree = "<group>"; };
+		29F16A5A2887F9DD0068C9EC /* DCWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCWebViewController.h; sourceTree = "<group>"; };
+		29F16A5B2887F9DD0068C9EC /* DCWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCWebViewController.m; sourceTree = "<group>"; };
+		29F16A5E288931DE0068C9EC /* DCBlock1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCBlock1ViewController.h; sourceTree = "<group>"; };
+		29F16A5F288931DE0068C9EC /* DCBlock1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCBlock1ViewController.m; sourceTree = "<group>"; };
 		29FF55A7287D590900B0B68D /* ZYPositionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYPositionButton.m; sourceTree = "<group>"; };
 		29FF55A8287D590A00B0B68D /* ZYMyCenterHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYMyCenterHeadView.h; sourceTree = "<group>"; };
 		29FF55A9287D590A00B0B68D /* ZYMyCenterHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYMyCenterHeadView.m; sourceTree = "<group>"; };
@@ -2000,6 +2006,28 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		29F16A5D288931C40068C9EC /* Block */ = {
+			isa = PBXGroup;
+			children = (
+				29F16A5E288931DE0068C9EC /* DCBlock1ViewController.h */,
+				29F16A5F288931DE0068C9EC /* DCBlock1ViewController.m */,
+			);
+			path = Block;
+			sourceTree = "<group>";
+		};
+		29F16A61288931E60068C9EC /* Pop_Request_Web */ = {
+			isa = PBXGroup;
+			children = (
+				29F16A542887DFB00068C9EC /* DCPopTestViewController.h */,
+				29F16A552887DFB00068C9EC /* DCPopTestViewController.m */,
+				29F16A572887DFE00068C9EC /* DCRequestTestViewController.h */,
+				29F16A582887DFE00068C9EC /* DCRequestTestViewController.m */,
+				29F16A5A2887F9DD0068C9EC /* DCWebViewController.h */,
+				29F16A5B2887F9DD0068C9EC /* DCWebViewController.m */,
+			);
+			path = Pop_Request_Web;
+			sourceTree = "<group>";
+		};
 		29FF55AD287D592700B0B68D /* PositionButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -2014,12 +2042,10 @@
 		29FF55B0287E65A400B0B68D /* Mytest(测试） */ = {
 			isa = PBXGroup;
 			children = (
+				29F16A61288931E60068C9EC /* Pop_Request_Web */,
+				29F16A5D288931C40068C9EC /* Block */,
 				29FF55B1287E669800B0B68D /* DCTestViewController.h */,
 				29FF55B2287E669800B0B68D /* DCTestViewController.m */,
-				29F16A542887DFB00068C9EC /* DCPopTestViewController.h */,
-				29F16A552887DFB00068C9EC /* DCPopTestViewController.m */,
-				29F16A572887DFE00068C9EC /* DCRequestTestViewController.h */,
-				29F16A582887DFE00068C9EC /* DCRequestTestViewController.m */,
 				29F16A502887DA960068C9EC /* Model */,
 				29F16A41288683CC0068C9EC /* View */,
 			);
@@ -2278,6 +2304,7 @@
 				92B4F8591F8DBBD2003C2E76 /* NetworkUnit.m in Sources */,
 				92B4F8581F8DBBCC003C2E76 /* EGOCache.m in Sources */,
 				92B4F8571F8DBBBE003C2E76 /* RequestTool.m in Sources */,
+				29F16A60288931DE0068C9EC /* DCBlock1ViewController.m in Sources */,
 				29FF55AC287D590B00B0B68D /* ZYMyCenterHeadView.m in Sources */,
 				18DCA3911F1F4187008BF67E /* DCGoodsSurplusCell.m in Sources */,
 				18DCA3C91F1F4187008BF67E /* DCRecommendCell.m in Sources */,
@@ -2422,6 +2449,7 @@
 				18DCA33A1F1F4187008BF67E /* DCCommentFooterCell.m in Sources */,
 				18DCA3A31F1F4187008BF67E /* DCReceiverAdressViewController.m in Sources */,
 				18DCA39F1F1F4187008BF67E /* DCTabBar.m in Sources */,
+				29F16A5C2887F9DD0068C9EC /* DCWebViewController.m in Sources */,
 				18DCA3741F1F4187008BF67E /* SDWaitingView.m in Sources */,
 				18DCA3281F1F4187008BF67E /* DCFeatureItem.m in Sources */,
 				29F16A4A288690A30068C9EC /* DCCenterPopView.m in Sources */,

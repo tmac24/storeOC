@@ -35,7 +35,7 @@
     [self addSubview:bacView];
     
     for (int i=0; i<5; i++) {
-        NSString *title = [NSString stringWithFormat:@"香蕉🍌--%d",i];
+        NSString *title = [NSString stringWithFormat:@"我是内容--%d",i];
         UILabel *label = [UILabel quickInit:[UIColor blackColor] font:PFRFont(14) text:title];
         label.frame = CGRectMake(23, 30*i, 100, 30);
         [self addSubview:label];

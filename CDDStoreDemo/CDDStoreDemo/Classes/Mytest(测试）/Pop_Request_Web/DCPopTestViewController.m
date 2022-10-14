@@ -20,6 +20,8 @@
 /* 选择框弹框视图 */
 @property (nonatomic, strong) DCTestPopSelectView *popSelectView;
 
+@property (nonatomic, strong) UIView *popBottomView;
+
 @end
 
 @implementation DCPopTestViewController
@@ -40,7 +42,8 @@
 
 - (DCTestPopSelectView *)popSelectView {
     if (!_popSelectView) {
-        _popSelectView = [[DCTestPopSelectView alloc] initWithFrame:CGRectMake(0, 0, ScreenW, 150)];
+        _popSelectView = [[DCTestPopSelectView alloc] initWithFrame:CGRectMake(0, 0, ScreenW, 170)];
+        [_popSelectView setExtCorner:UIRectCornerTopLeft|UIRectCornerTopRight radii:15];
     }
     return _popSelectView;
 }
@@ -100,6 +103,27 @@
         [DCDrawerPopView showOrHideWithContent:self.popSelectView width:ScreenW*0.8];
     }
     
+}
+
+
+- (UIView *)popBottomView {
+    if (!_popBottomView) {
+        _popBottomView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenW, 170)];
+        _popBottomView.backgroundColor = [UIColor blueColor];
+        [_popBottomView setExtCorner:UIRectCornerTopLeft|UIRectCornerTopRight radii:15];
+    }
+    return _popBottomView;
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    //        if (self.popBottomView.superview != nil) {
+    //            [DCBottomPopView dismiss];
+    //        }else {
+    //            [DCBottomPopView showWithContent:self.popBottomView enableGesture:true];
+    //        }
+    
+    [DCBottomPopView showOrHideWithContent:self.popBottomView];
 }
 
 /*

@@ -27,4 +27,10 @@
 + (instancetype)dc_viewFromXib;
 - (BOOL)isShowingOnKeyWindow;
 
+
+/// 设置特定位置的圆角
+/// @param corners UIRectCornerTopLeft|UIRectCornerBottom 等
+/// @param radii 弧度值
+- (void)setExtCorner:(UIRectCorner)corners radii:(CGFloat)radii;
+
 @end

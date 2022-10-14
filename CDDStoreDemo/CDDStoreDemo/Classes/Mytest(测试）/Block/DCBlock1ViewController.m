@@ -11,7 +11,8 @@
 typedef void (^RequestResult)(BOOL result);
 
 @interface DCBlock1ViewController ()
-
+/** <#name#> */
+@property (nonatomic, copy) RequestResult result;
 @end
 
 @implementation DCBlock1ViewController

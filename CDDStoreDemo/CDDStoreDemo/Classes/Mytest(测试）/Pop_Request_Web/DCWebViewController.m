@@ -26,6 +26,7 @@
         _webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:self.config];
     }
     return _webView;
+    navH
 }
 
 - (WKWebViewConfiguration *)config {

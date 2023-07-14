@@ -10,7 +10,12 @@
 @import Flutter;
 
 @interface AppDelegate : FlutterAppDelegate // More on the FlutterAppDelegate below.
+
+/// 单个页面
 @property (nonatomic,strong) FlutterEngine *flutterEngine;
+
+/// engines多个页面切换
+@property (nonatomic, strong) FlutterEngineGroup *engines;
 
 @property (strong, nonatomic) UIWindow *window;
 

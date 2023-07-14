@@ -26,6 +26,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    //多个页面切换
+    self.engines = [[FlutterEngineGroup alloc] initWithName:@"multiple-flutters" project:nil];
+    
     self.flutterEngine = [[FlutterEngine alloc] initWithName:@"my flutter engine"];
     // Runs the default Dart entrypoint with a default Flutter route.
     [self.flutterEngine run];

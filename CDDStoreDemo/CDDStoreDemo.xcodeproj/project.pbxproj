@@ -212,6 +212,10 @@
 		18DD85C71F0650F400F47095 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DD85C61F0650F400F47095 /* Assets.xcassets */; };
 		18F64B1B1F0E03F500DB978C /* PingFang Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18F64B1A1F0E03F500DB978C /* PingFang Medium.ttf */; };
 		299EBEF22A60E354009E1BBE /* DCFlutterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 299EBEF12A60E354009E1BBE /* DCFlutterViewController.m */; };
+		299EBEF72A612F83009E1BBE /* SingleFlutterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299EBEF62A612F83009E1BBE /* SingleFlutterVC.swift */; };
+		299EBEF92A612FF4009E1BBE /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299EBEF82A612FF4009E1BBE /* DataModel.swift */; };
+		299EBEFB2A6137A4009E1BBE /* DoubleFlutterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299EBEFA2A6137A3009E1BBE /* DoubleFlutterViewController.swift */; };
+		299EBEFF2A614021009E1BBE /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299EBEFE2A614021009E1BBE /* HostViewController.swift */; };
 		29BB65642881373800E5B488 /* UILabel+DCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BB65632881373800E5B488 /* UILabel+DCExtension.m */; };
 		29F16A3A288153570068C9EC /* DCProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F16A39288153570068C9EC /* DCProgressHUD.m */; };
 		29F16A3E288156AB0068C9EC /* DCTopPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F16A3D288156AB0068C9EC /* DCTopPopView.m */; };
@@ -641,6 +645,10 @@
 		18F64B1A1F0E03F500DB978C /* PingFang Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PingFang Medium.ttf"; sourceTree = "<group>"; };
 		299EBEF02A60E354009E1BBE /* DCFlutterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCFlutterViewController.h; sourceTree = "<group>"; };
 		299EBEF12A60E354009E1BBE /* DCFlutterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCFlutterViewController.m; sourceTree = "<group>"; };
+		299EBEF62A612F83009E1BBE /* SingleFlutterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleFlutterVC.swift; sourceTree = "<group>"; };
+		299EBEF82A612FF4009E1BBE /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		299EBEFA2A6137A3009E1BBE /* DoubleFlutterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleFlutterViewController.swift; sourceTree = "<group>"; };
+		299EBEFE2A614021009E1BBE /* HostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
 		29BB655A2881323300E5B488 /* CDDStoreDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CDDStoreDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		29BB65622881373800E5B488 /* UILabel+DCExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+DCExtension.h"; sourceTree = "<group>"; };
 		29BB65632881373800E5B488 /* UILabel+DCExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+DCExtension.m"; sourceTree = "<group>"; };
@@ -1310,7 +1318,6 @@
 			isa = PBXGroup;
 			children = (
 				18DCA1E71F1F4186008BF67E /* Headers.h */,
-				29BB655A2881323300E5B488 /* CDDStoreDemo-Bridging-Header.h */,
 			);
 			path = "Headers(头文件)";
 			sourceTree = "<group>";
@@ -1326,6 +1333,7 @@
 		18DCA1EA1F1F4186008BF67E /* Tools(工具) */ = {
 			isa = PBXGroup;
 			children = (
+				29BB655A2881323300E5B488 /* CDDStoreDemo-Bridging-Header.h */,
 				29FF55AD287D592700B0B68D /* PositionButton */,
 				18DCA1EB1F1F4186008BF67E /* CustionButton */,
 				18DCA1F21F1F4186008BF67E /* DCKeepNewUserData.h */,
@@ -2051,6 +2059,10 @@
 				29FF55B2287E669800B0B68D /* DCTestViewController.m */,
 				299EBEF02A60E354009E1BBE /* DCFlutterViewController.h */,
 				299EBEF12A60E354009E1BBE /* DCFlutterViewController.m */,
+				299EBEFE2A614021009E1BBE /* HostViewController.swift */,
+				299EBEF62A612F83009E1BBE /* SingleFlutterVC.swift */,
+				299EBEFA2A6137A3009E1BBE /* DoubleFlutterViewController.swift */,
+				299EBEF82A612FF4009E1BBE /* DataModel.swift */,
 				29F16A502887DA960068C9EC /* Model */,
 				29F16A41288683CC0068C9EC /* View */,
 			);
@@ -2161,7 +2173,7 @@
 				TargetAttributes = {
 					187E67851E7D793000722607 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = W2WUVUE5P6;
+						DevelopmentTeam = 3V39Q7F96X;
 						LastSwiftMigration = 1340;
 						ProvisioningStyle = Automatic;
 					};
@@ -2404,10 +2416,13 @@
 				18DCA37C1F1F4187008BF67E /* XWCoolAnimator+XWScanning.m in Sources */,
 				181AED921F4BC852003DB950 /* DCFiltrateViewController.m in Sources */,
 				187E678B1E7D793100722607 /* main.m in Sources */,
+				299EBEF92A612FF4009E1BBE /* DataModel.swift in Sources */,
+				299EBEF72A612F83009E1BBE /* SingleFlutterVC.swift in Sources */,
 				18DCA35B1F1F4187008BF67E /* LBXScanResult.m in Sources */,
 				18DCA3191F1F4187008BF67E /* DCColonInsView.m in Sources */,
 				18DCA3A11F1F4187008BF67E /* DCHelpBackViewController.m in Sources */,
 				18DCA3801F1F4187008BF67E /* XWFilterAnimator+XWBoxBlur.m in Sources */,
+				299EBEFB2A6137A4009E1BBE /* DoubleFlutterViewController.swift in Sources */,
 				18DCA34D1F1F4187008BF67E /* DCSpeedy.m in Sources */,
 				181AED861F4BC646003DB950 /* DCGoodCommentViewController.m in Sources */,
 				18DCA3271F1F4187008BF67E /* DCCommentPicItem.m in Sources */,
@@ -2500,6 +2515,7 @@
 				18DCA36E1F1F4187008BF67E /* XWTransitionAnimator.m in Sources */,
 				18DCA3821F1F4187008BF67E /* XWFilterAnimator+XWFlash.m in Sources */,
 				18DCA3A61F1F4187008BF67E /* DCSettingViewController.m in Sources */,
+				299EBEFF2A614021009E1BBE /* HostViewController.swift in Sources */,
 				18DCA3751F1F4187008BF67E /* XWCircleSpreadAnimator.m in Sources */,
 				29F16A532887DABC0068C9EC /* DCTestModel.m in Sources */,
 				18DCA3C81F1F4187008BF67E /* DCEmptyCartView.m in Sources */,
@@ -2673,11 +2689,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = W2WUVUE5P6;
+				DEVELOPMENT_TEAM = 3V39Q7F96X;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = CDDStoreDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = CDDStoreDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = STO.RocketsChen.CDDMall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2696,11 +2712,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = W2WUVUE5P6;
+				DEVELOPMENT_TEAM = 3V39Q7F96X;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = CDDStoreDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = CDDStoreDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = STO.RocketsChen.CDDMall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2713,6 +2729,7 @@
 		187E67B71E7D793100722607 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 2BU7DGY6CY;
 				INFOPLIST_FILE = CDDStoreDemoTests/Info.plist;
@@ -2726,6 +2743,7 @@
 		187E67B81E7D793100722607 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 2BU7DGY6CY;
 				INFOPLIST_FILE = CDDStoreDemoTests/Info.plist;
@@ -2739,6 +2757,7 @@
 		187E67BA1E7D793100722607 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 2BU7DGY6CY;
 				INFOPLIST_FILE = CDDStoreDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -2751,6 +2770,7 @@
 		187E67BB1E7D793100722607 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 2BU7DGY6CY;
 				INFOPLIST_FILE = CDDStoreDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

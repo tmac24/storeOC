@@ -28,6 +28,9 @@
   "dependencies": {
     "Flutter": [
 
+    ],
+    "url_launcher_ios": [
+
     ]
   }
 }

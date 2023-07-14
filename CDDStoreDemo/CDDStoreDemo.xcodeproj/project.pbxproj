@@ -211,6 +211,7 @@
 		18DCA3CA1F1F4187008BF67E /* DCRecommendReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCA3081F1F4187008BF67E /* DCRecommendReusableView.m */; };
 		18DD85C71F0650F400F47095 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DD85C61F0650F400F47095 /* Assets.xcassets */; };
 		18F64B1B1F0E03F500DB978C /* PingFang Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18F64B1A1F0E03F500DB978C /* PingFang Medium.ttf */; };
+		299EBEF22A60E354009E1BBE /* DCFlutterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 299EBEF12A60E354009E1BBE /* DCFlutterViewController.m */; };
 		29BB65642881373800E5B488 /* UILabel+DCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BB65632881373800E5B488 /* UILabel+DCExtension.m */; };
 		29F16A3A288153570068C9EC /* DCProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F16A39288153570068C9EC /* DCProgressHUD.m */; };
 		29F16A3E288156AB0068C9EC /* DCTopPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F16A3D288156AB0068C9EC /* DCTopPopView.m */; };
@@ -638,6 +639,8 @@
 		18DD85C61F0650F400F47095 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18DD85C81F06512100F47095 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		18F64B1A1F0E03F500DB978C /* PingFang Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PingFang Medium.ttf"; sourceTree = "<group>"; };
+		299EBEF02A60E354009E1BBE /* DCFlutterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCFlutterViewController.h; sourceTree = "<group>"; };
+		299EBEF12A60E354009E1BBE /* DCFlutterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCFlutterViewController.m; sourceTree = "<group>"; };
 		29BB655A2881323300E5B488 /* CDDStoreDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CDDStoreDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		29BB65622881373800E5B488 /* UILabel+DCExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+DCExtension.h"; sourceTree = "<group>"; };
 		29BB65632881373800E5B488 /* UILabel+DCExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+DCExtension.m"; sourceTree = "<group>"; };
@@ -2046,6 +2049,8 @@
 				29F16A5D288931C40068C9EC /* Block */,
 				29FF55B1287E669800B0B68D /* DCTestViewController.h */,
 				29FF55B2287E669800B0B68D /* DCTestViewController.m */,
+				299EBEF02A60E354009E1BBE /* DCFlutterViewController.h */,
+				299EBEF12A60E354009E1BBE /* DCFlutterViewController.m */,
 				29F16A502887DA960068C9EC /* Model */,
 				29F16A41288683CC0068C9EC /* View */,
 			);
@@ -2448,6 +2453,7 @@
 				18DCA3401F1F4187008BF67E /* DCFeatureItemCell.m in Sources */,
 				18DCA3611F1F4187008BF67E /* LBXZXCapture.m in Sources */,
 				18DCA3121F1F4187008BF67E /* DCBrandSortCell.m in Sources */,
+				299EBEF22A60E354009E1BBE /* DCFlutterViewController.m in Sources */,
 				18DCA3101F1F4187008BF67E /* DCClassMianItem.m in Sources */,
 				18DCA3371F1F4187008BF67E /* DCShowTypeTwoCell.m in Sources */,
 				18DCA3151F1F4187008BF67E /* DCSwitchGridCell.m in Sources */,

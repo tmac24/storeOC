@@ -6,9 +6,11 @@
 //  Copyright © 2017年 RocketsChen. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+@import Flutter;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : FlutterAppDelegate // More on the FlutterAppDelegate below.
+@property (nonatomic,strong) FlutterEngine *flutterEngine;
 
 @property (strong, nonatomic) UIWindow *window;
 

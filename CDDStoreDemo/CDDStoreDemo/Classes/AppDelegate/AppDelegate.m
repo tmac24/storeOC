@@ -6,6 +6,8 @@
 //  Copyright © 2017年 RocketsChen. All rights reserved.
 //
 
+#import <FlutterPluginRegistrant/GeneratedPluginRegistrant.h>
+
 #import "AppDelegate.h"
 #import "JKDBModel.h"
 #import "DCTabBarController.h"
@@ -23,6 +25,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    self.flutterEngine = [[FlutterEngine alloc] initWithName:@"my flutter engine"];
+    // Runs the default Dart entrypoint with a default Flutter route.
+    [self.flutterEngine run];
+    // Connects plugins with iOS platform code to this app.
+    [GeneratedPluginRegistrant registerWithRegistry:self.flutterEngine];
+//    return [super application:application didFinishLaunchingWithOptions:launchOptions];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     

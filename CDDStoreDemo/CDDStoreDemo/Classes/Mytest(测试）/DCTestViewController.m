@@ -11,6 +11,8 @@
 #import "DCRequestTestViewController.h"
 #import "DCWebViewController.h"
 #import "DCBlock1ViewController.h"
+#import "DCFlutterViewController.h"
+
 
 @interface DCTestViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -54,7 +56,7 @@ static NSString *const DCTestViewCellID = @"DCTestViewCellID";
 }
 
 - (void)setUpData{
-    self.datas = @[@"弹框test",@"网络请求test",@"网页交互",@"DCBlock1ViewController",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1"
+    self.datas = @[@"弹框test",@"网络请求test",@"网页交互",@"DCBlock1ViewController",@"跳转flutter",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1",@"数据1"
         ];
     [self.tableView reloadData];
 }
@@ -95,6 +97,8 @@ static NSString *const DCTestViewCellID = @"DCTestViewCellID";
         vc = [[DCWebViewController alloc] init];
     }else if (indexPath.row == 3) {
         vc = [[DCBlock1ViewController alloc] init];
+    }else if (indexPath.row == 4) {
+        vc = [[DCFlutterViewController alloc] init];
     }
     vc.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController pushViewController:vc animated:true];

@@ -2092,10 +2092,12 @@
 			buildConfigurationList = 187E67B31E7D793100722607 /* Build configuration list for PBXNativeTarget "CDDStoreDemo" */;
 			buildPhases = (
 				F84130B772E7864406C2F481 /* [CP] Check Pods Manifest.lock */,
+				045C6C5A8725359232075106 /* [CP-User] Run Flutter Build my_flutter Script */,
 				187E67821E7D793000722607 /* Sources */,
 				187E67831E7D793000722607 /* Frameworks */,
 				187E67841E7D793000722607 /* Resources */,
 				4B9CD8A998A4AED2AB625A1B /* [CP] Copy Pods Resources */,
+				4C7A160EAB3142DDB64EC3D4 /* [CP-User] Embed Flutter Build my_flutter Script */,
 			);
 			buildRules = (
 			);
@@ -2251,6 +2253,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		045C6C5A8725359232075106 /* [CP-User] Run Flutter Build my_flutter Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Run Flutter Build my_flutter Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../my_flutter/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+		};
 		4B9CD8A998A4AED2AB625A1B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2274,6 +2286,16 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CDDStoreDemo/Pods-CDDStoreDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		4C7A160EAB3142DDB64EC3D4 /* [CP-User] Embed Flutter Build my_flutter Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Embed Flutter Build my_flutter Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../my_flutter/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh embed_and_thin";
 		};
 		F84130B772E7864406C2F481 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

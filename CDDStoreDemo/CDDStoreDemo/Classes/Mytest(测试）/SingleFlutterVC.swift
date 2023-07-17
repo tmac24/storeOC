@@ -34,6 +34,17 @@ class SingleFlutterVC: FlutterViewController, DataModelObserver {
         channel.invokeMethod("setCount", arguments: newCount)
       }
     }
+    
+    //导航栏显示与隐藏
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
 
     override func viewDidLoad() {
       super.viewDidLoad()
@@ -53,7 +64,9 @@ class SingleFlutterVC: FlutterViewController, DataModelObserver {
           let vc = HostViewController();
           navController.pushViewController(vc, animated: true)
           result(nil)
-        } else {
+        } else if call.method == "dissmissVC" {
+            navController.popViewController(animated: true)
+        }else {
           result(FlutterMethodNotImplemented)
         }
       }

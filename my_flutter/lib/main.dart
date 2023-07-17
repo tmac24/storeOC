@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
           elevation: 8,
         ),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Flutter Demo Home P'),
     );
   }
 }
@@ -66,10 +66,19 @@ class _MyHomePageState extends State<MyHomePage> {
     _channel.invokeMethod<void>("incrementCount", _counter);
   }
 
+  void _dissmissPage() {
+    _channel.invokeMethod<void>("dissmissVC", _counter);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+            onPressed: () {
+              _dissmissPage();
+            },
+            icon: const Icon(Icons.arrow_back_ios)),
         title: Text(widget.title),
       ),
       body: Center(

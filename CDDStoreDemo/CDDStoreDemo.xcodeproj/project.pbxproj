@@ -2695,7 +2695,7 @@
 				INFOPLIST_FILE = CDDStoreDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = STO.RocketsChen.CDDMall;
+				PRODUCT_BUNDLE_IDENTIFIER = STO.RocketsChen.CDDMall2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CDDStoreDemo/Classes/Expand(扩展)/Tools(工具)/CDDStoreDemo-Bridging-Header.h";
@@ -2718,7 +2718,7 @@
 				INFOPLIST_FILE = CDDStoreDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = STO.RocketsChen.CDDMall;
+				PRODUCT_BUNDLE_IDENTIFIER = STO.RocketsChen.CDDMall2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CDDStoreDemo/Classes/Expand(扩展)/Tools(工具)/CDDStoreDemo-Bridging-Header.h";
